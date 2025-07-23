@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-dotenv
+f5-tts
+scipy
+vocos
+hf_xet

@@ -1,0 +1,7 @@
+*.pid
+*.log
+archive
+.vscode/
+__pycache__/
+env/
+f5tts/
