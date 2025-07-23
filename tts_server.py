@@ -48,30 +48,7 @@ else:
     device = "cpu"
 
 logger.info(f"Loading model on device: {device}")
-target_folder = os.getenv("TTS_MODEL")
-os.makedirs(target_folder, exist_ok=True)
-
-files = [
-    "model_last_v2.safetensors",
-    "setting.json",
-    "vocab.txt"
-]
-repo_id = "PapaRazi/Ijazah_Palsu_V2"
-
-for filename in files:
-    file_path = os.path.join(target_folder, filename)
-    if os.path.exists(file_path):
-        print(f"Skipping {filename}: already exists.")
-        continue
-
-    hf_hub_download(
-        repo_id=repo_id,
-        filename=filename,
-        cache_dir=target_folder,
-        local_dir=target_folder,
-        local_dir_use_symlinks=False
-    )
-
+target_folder = os.getenv("target_folder")
 model_path = target_folder + "/model_last_v2.safetensors"
 config_path = target_folder + "/setting.json"
 vocab_path = target_folder + "/vocab.txt"

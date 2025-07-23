@@ -2,7 +2,7 @@ import os
 from huggingface_hub import hf_hub_download
 
 
-target_folder = os.getenv("f5tts")
+target_folder = "f5tts"
 os.makedirs(target_folder, exist_ok=True)
 
 files = [
